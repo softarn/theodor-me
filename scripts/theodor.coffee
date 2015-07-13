@@ -28,7 +28,4 @@ quotes = [
 
 module.exports = (robot)->
   robot.respond /theodor( me)?/i, (msg)->
-    msg.send random_quote();
-
-random_quote = ()->
-  console.log quotes[Math.floor(Math.random() * quotes.length)]
+    msg.send msg.random quotes
